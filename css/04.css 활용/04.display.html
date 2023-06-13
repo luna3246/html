@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+            border: solid 1px red;
+        }
+        div{
+            background-color: #eeeeee;
+        }
+        #text1{
+            /* display: inline; 라인으로 취급되면서 속성이 적용안됨 */
+            width: 100px;
+            height: 100px;
+        }
+        #text2{
+            /* 라인 바꾸면서 */
+            display: block;
+            width: 100px;
+            height: 100px;
+        }
+        #text3{
+            /* 라인을 유지하면서 블럭의 특징 */
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+        #text4{
+            /* 그 부분을 안나타나게 하겠다.(ex 신메뉴 만들 때, 지우기 애매할 때) */
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- h1+h3+div -->
+    <h1>display 속성</h1>
+    <h3>display: inline</h3>
+    <div>글자1<span id = "text1">안녕하세요!</span>글자2</div>
+
+    <!-- display block처럼(블럭과 인라인을 선택할 수 있다.) -->
+    <h3>display: block</h3>
+    <div>글자1<span id = "text2">안녕하세요!</span>글자2</div>
+
+    <h3>display: inline-block</h3>
+    <div>글자1<span id = "text3">안녕하세요!</span>글자2</div>
+
+    <h3>display: none</h3>
+    <!-- 코드는 있고 사람들에겐 보이지 않게 -->
+    <div>글자1<span id = "text4">안녕하세요!</span>글자2</div>
+</body>
+</html>

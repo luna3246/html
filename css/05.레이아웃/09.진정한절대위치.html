@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>09.진정한절대위치</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+        #a, #b, #c {
+            width: 100px;
+            height: 60px;
+            background-color: aqua;
+            border: solid 1px black;
+        }
+        #parent {
+            width: 350px;
+            height: 200px;
+            border: solid 1px red;
+            padding: 90px 0px 0px 60px;
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+        #b {
+            /* 원래 배치된 곳을 기준으로부터 배치된다. */
+            /* position: relative; */
+            /* 부모의 위치로부터 x씩 떨어진 곳 */
+            /* position: absolute; */
+            /* 현재 브라우저 창을 기준으로 배치(항상 떠있어야할 중요한 애들) */
+            position: fixed;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="a">요소 A</div>
+        <div id="b">요소 B</div>
+        <div id="c">요소 C</div>
+    </div>
+</body>
+
+</html>

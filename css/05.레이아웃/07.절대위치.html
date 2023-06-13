@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07.절대위치</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+        #a, #b, #c {
+            width: 100px;
+            height: 60px;
+            background-color: aqua;
+            border: solid 1px black;
+        }
+        #b {
+            /* 부모로부터 떨어지는 것 - 바디로부터 30떨어져 100떨어져 */
+            position: absolute;
+            top: 30px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="a">요소 A</div>
+    <div id="b">요소 B</div>
+    <div id="c">요소 C</div>
+</body>
+</html>

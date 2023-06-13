@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>블록vs인라인</title>
+    <style>
+        /* 줄바꿈을 하는지 안하는지 */
+        /* 블록태그(div, p, ul, ol, hr, h1~h6...) */
+        /* 인라인태그(span, img, a, input) */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        span {
+            border: solid 1px black;
+            background-color: yellow;
+        }
+        #a {
+            /* 속성에 따라 안 먹는 속성들이 있음 너비 높이 조절안되고 마진도 위아래로만*/
+            width: 100px; 
+            height: 100px;
+            margin: 20px; 
+        }
+        #b {
+            display: block;
+            width: 100px; 
+            height: 100px;
+            margin: 20px; 
+        }
+        #c {
+            /* 인라인 유지하면서 블록 속성 먹이기 *(줄을 유지하면서 속성을 먹이고 싶을때*/
+            display: inline-block;
+            width: 100px; 
+            height: 100px;
+            margin: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <h3>인라인과 블록</h3>
+    <p>
+        글자1 <span id="a"> 요소 A </span>
+        글자2 <span id="b"> 요소 B </span>
+        글자3 <span id="c"> 요소 C </span>
+        글자4
+    </p>
+</body>
+</html>
